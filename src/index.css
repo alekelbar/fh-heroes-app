@@ -1,0 +1,18 @@
+@import url('./UI/components/navbar.css');
+
+:root {
+  --montserrat: 'Montserrat', sans-serif;
+  --sans: 'Open Sans', sans-serif;
+  --navbar-color: #113D70;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--montserrat);
+}
+
+body {
+  font-size: 20px;
+}
