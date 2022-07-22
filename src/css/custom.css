@@ -1,0 +1,14 @@
+:root {
+
+  --montserrat: 'Montserrat', sans-serif;
+  --sans: 'Open Sans', sans-serif;
+
+  /* Color Theme Swatches in Hex */
+
+  --blue-background: #113D70;
+  --blue-light: #6DABF2;
+  --blue-pale: #2483F0;
+  --blue-gray: #536273;
+  --blue-lite: #1C67BD;
+  --white: white;
+}

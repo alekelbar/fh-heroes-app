@@ -1,33 +1,40 @@
 import { NavLink } from 'react-router-dom'
-import { spider } from './../../assets'
+import './navbar.css'
+
 
 
 export const Navbar = () => {
   return (
-    <div className='navbar'>
+    <nav className='navbar'>
       <div className="navbar__container">
-        <figure className='navbar__logo-container'>
-          <img src={spider} className='navbar__logo'></img>
-        </figure>
-        <nav className='navbar__nav'>
-          <ul className='navbar__list'>
+        <div className="navbar__left">
+          <span className="navbar__logo">comics</span>
+        </div>
+        <div className="navbar__right">
+          <ul className="navbar__list">
             <NavLink
               to={'/marvel'}
               className={({ isActive }) => (isActive ? 'navbar__item navbar__item--active' : 'navbar__item')}
-            >marvel</NavLink>
+            >
+              marvel
+            </NavLink>
 
             <NavLink
               to={'/dc'}
               className={({ isActive }) => (isActive ? 'navbar__item navbar__item--active' : 'navbar__item')}
-            > DC</NavLink>
+            >
+              dc
+            </NavLink>
 
             <NavLink
-              to={'/Login'}
+              to={'/login'}
               className={({ isActive }) => (isActive ? 'navbar__item navbar__item--active' : 'navbar__item')}
-            >Login</NavLink>
+            >
+              logout
+            </NavLink>
           </ul>
-        </nav>
+        </div>
       </div>
-    </div >
+    </nav >
   )
 }
