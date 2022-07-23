@@ -1,0 +1,15 @@
+@import url(./../../css/custom.css);
+
+
+.hero__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content;
+}
+
+
+@media (min-width: 900px) {
+  .hero__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

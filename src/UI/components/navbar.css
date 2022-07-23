@@ -1,28 +1,27 @@
 @import url(./../../css/custom.css);
 
 .navbar {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
+  align-items: center;
   background-color: var(--blue-background);
+  display: flex;
+  font-size: 16px;
+  height: 40px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .navbar__container {
   width: 90%;
   margin: auto;
-  height: 48px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .navbar__left {
-  width: 128px;
+  width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-weight: 500;
   color: var(--white);
 }
@@ -32,8 +31,7 @@
 }
 
 .navbar__right {
-  width: 192px;
-  height: 100%;
+  width: 50%;
 }
 
 .navbar__list {
@@ -47,7 +45,7 @@
 .navbar__item {
   color: var(--white);
   text-decoration: none;
-  font-size: .8em;
+  font-size: .6em;
   text-transform: capitalize;
 }
 
@@ -55,17 +53,19 @@
   color: var(--blue-gray);
 }
 
+.navbar__item--button {
+  background-color: transparent;
+  border: none;
+}
+
 
 @media (min-width: 768px) {
   .navbar {
-    font-size: 25px;
     height: 80px;
-    justify-content: flex-start;
-    align-items: baseline;
-    gap: 50px;
   }
 
-  .navbar__list {
-    justify-content: space-between;
+  .navbar {
+    font-size: 40px;
+    height: 120px;
   }
 }

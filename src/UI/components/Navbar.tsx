@@ -1,9 +1,17 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import './navbar.css'
 
 
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    navigate('/login', {
+      replace: true,
+    })
+  }
+
   return (
     <nav className='navbar'>
       <div className="navbar__container">
@@ -27,11 +35,18 @@ export const Navbar = () => {
             </NavLink>
 
             <NavLink
-              to={'/login'}
+              to={'/search'}
               className={({ isActive }) => (isActive ? 'navbar__item navbar__item--active' : 'navbar__item')}
             >
-              logout
+              search
             </NavLink>
+
+            <button
+              onClick={onLogout}
+              className='navbar__item navbar__item--button'
+            >
+              logout
+            </button>
           </ul>
         </div>
       </div>

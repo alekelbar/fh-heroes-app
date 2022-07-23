@@ -1,0 +1,11 @@
+@import url(../../css/custom.css);
+
+.button-login {
+  background-color: var(--blue-lite);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  color: var(--white);
+  font-size: 20px;
+}

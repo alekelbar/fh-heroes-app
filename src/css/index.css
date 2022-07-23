@@ -6,3 +6,9 @@
   box-sizing: border-box;
   font-family: var(--montserrat);
 }
+
+.container {
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+}
