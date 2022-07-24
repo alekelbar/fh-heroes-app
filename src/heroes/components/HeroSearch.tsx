@@ -22,6 +22,10 @@ export const HeroSearch = () => {
     setInput({ ...input, hero: value })
   }
 
+  useEffect(() => {
+    setHeroes(getHeroesByName(input.hero));
+  }, []);
+
   const onHeroes = (heroes: hero[]) => {
     setHeroes(heroes);
   }

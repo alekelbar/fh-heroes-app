@@ -4,17 +4,20 @@
 .search {
   display: grid;
   grid-template-rows: 1fr 5fr;
+  height: calc(100vh - 80px);
 }
 
 .search__results {
-  background-color: var(--blue-background);
+  background-color: transparent;
   color: var(--white);
-  height: 65vh;
-  width: 100%;
+  height: 90%;
+  width: 50%;
+  color: black;
   border-radius: 5px;
   overflow-y: auto;
   overflow-x: hidden;
 }
+
 
 .container--padding {
   padding: 20px;
@@ -23,6 +26,7 @@
 .search__alert {
   text-align: center;
   font-size: 1.5em;
+  color: black;
 }
 
 @media (min-width: 768px) {
