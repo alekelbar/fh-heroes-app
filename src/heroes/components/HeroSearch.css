@@ -1,0 +1,32 @@
+@import url(./../../css/custom.css);
+
+
+.search {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+
+.search__results {
+  background-color: var(--blue-background);
+  color: var(--white);
+  height: 65vh;
+  width: 100%;
+  border-radius: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container--padding {
+  padding: 20px;
+}
+
+.search__alert {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .search__results {
+    margin: 50px auto;
+  }
+}

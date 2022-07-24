@@ -1,3 +1,4 @@
+import { useMemo } from "react"
 import { getHeroesByPublisher } from "../helpers"
 import { publisher } from "../types"
 import { HeroItem } from "./HeroItem"
@@ -8,10 +9,13 @@ type args = {
 }
 
 export const HeroList = ({ publisher }: args) => {
+
+  const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher])
+
   return (
     <div className="hero__list">
       {
-        getHeroesByPublisher(publisher).map(hero => (
+        heroes.map(hero => (
           <HeroItem key={hero.id} hero={hero} />
         ))
       }

@@ -18,9 +18,14 @@ export const HeroItem = ({ hero, maxsize, publisher }: args) => {
     navigate(`/hero/${hero.id}`)
   }
 
+  const onBack = () => {
+    navigate(-1);
+  }
+
   return (
     <div className={`${maxsize ? 'card card--min' : 'card'}`}>
-      <div className="card__img-header">
+      {maxsize ? <button className="card__button card__button--back" onClick={onBack}>Go Back</button> : null}
+      <div className={`${maxsize ? 'card__img-header card__img-header--min' : 'card__img-header'}`}>
         {hero.superhero}
         <br />
         {hero.publisher}
@@ -36,7 +41,7 @@ export const HeroItem = ({ hero, maxsize, publisher }: args) => {
           character: {hero.characters.split(',')}
         </p>
         <button
-          className="card__button"
+          className={`${maxsize ? 'card__button card__button--min' : 'card__button'}`}
           onClick={onMore}
         >More...</button>
       </div>

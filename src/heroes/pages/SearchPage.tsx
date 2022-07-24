@@ -1,6 +1,8 @@
+import { HeroSearch } from "../components/HeroSearch"
 
 export const SearchPage = () => {
   return (
-    <div>SearchPage</div>
+    // grid
+    <HeroSearch />
   )
 }

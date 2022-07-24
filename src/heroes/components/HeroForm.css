@@ -1,0 +1,22 @@
+@import url(./../../css/custom.css);
+
+.search__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__input {
+  padding: 10px 10px;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  text-align: center;
+  border-bottom: 2px solid var(--blue-background);
+}
+
+@media (min-width: 768px) {
+  .search__form {
+    font-size: 30px;
+  }
+}

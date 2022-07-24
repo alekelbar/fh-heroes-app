@@ -8,6 +8,8 @@
   height: 40px;
   overflow: hidden;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .navbar__container {
