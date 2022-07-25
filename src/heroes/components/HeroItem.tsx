@@ -32,7 +32,7 @@ export const HeroItem = ({ hero, maxsize, publisher }: args) => {
       </div>
       <figure className={`${maxsize ? 'card__img-container card__img-container--min' : 'card__img-container'}`}>
 
-        <img className={`${maxsize ? 'card__img card__img--min' : 'card__img'}`} src={`/assets/heroes/${hero.id}.jpg`} alt={hero.id} />
+        <img onClick={onMore} className={`${maxsize ? 'card__img card__img--min' : 'card__img'}`} src={`/assets/heroes/${hero.id}.jpg`} alt={hero.id} />
       </figure>
       <div className={`card__text`}>
         <p className={`${maxsize ? 'card__paragraph card__paragraph--min' : 'card__paragraph'}`}>
@@ -40,10 +40,6 @@ export const HeroItem = ({ hero, maxsize, publisher }: args) => {
           <br />
           character: {hero.characters.split(',')}
         </p>
-        <button
-          className={`${maxsize ? 'card__button card__button--min' : 'card__button'}`}
-          onClick={onMore}
-        >More...</button>
       </div>
     </div>
   )

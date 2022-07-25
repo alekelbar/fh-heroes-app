@@ -1,15 +1,20 @@
+import { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../heroes/context/AuthContext';
 import './navbar.css'
 
 
 
 export const Navbar = () => {
   const navigate = useNavigate();
+  const { onLogout } = useContext(AuthContext)
 
-  const onLogout = () => {
+  const Logout = () => {
+    onLogout();
     navigate('/login', {
       replace: true,
     })
+    localStorage.removeItem('user');
   }
 
   return (
@@ -42,7 +47,7 @@ export const Navbar = () => {
             </NavLink>
 
             <button
-              onClick={onLogout}
+              onClick={Logout}
               className='navbar__item navbar__item--button'
             >
               logout

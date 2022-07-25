@@ -3,13 +3,12 @@
 
 .hero__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: max-content;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 
 @media (min-width: 900px) {
-  .hero__list {
+  /* .hero__list {
     grid-template-columns: repeat(3, 1fr);
-  }
+  } */
 }

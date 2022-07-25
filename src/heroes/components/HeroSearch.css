@@ -4,14 +4,14 @@
 .search {
   display: grid;
   grid-template-rows: 1fr 5fr;
-  height: calc(100vh - 80px);
 }
 
 .search__results {
   background-color: transparent;
   color: var(--white);
-  height: 90%;
-  width: 50%;
+  height: calc(100vh - 80px);
+  width: 70%;
+  margin: 0 auto;
   color: black;
   border-radius: 5px;
   overflow-y: auto;
@@ -31,6 +31,6 @@
 
 @media (min-width: 768px) {
   .search__results {
-    margin: 50px auto;
+    margin: 25px auto;
   }
 }
